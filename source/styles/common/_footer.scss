@@ -1,0 +1,126 @@
+.footer-block {
+	background: #393939;
+	box-sizing: border-box;
+	font-family: 'officina-serif-medium';
+	font-size: 0;
+	padding: 30px 144px;
+	padding-top: 25px;
+	position: relative;
+	height: 127px;
+	z-index: 30;
+
+	&__participants, &__social-share {
+		color: #FFF;
+		display: inline-block;
+		font-size: 12px;
+		letter-spacing: 0.1px;
+		vertical-align: top;
+		width: 50%;
+	}
+
+	&__participants {
+		&__members {
+			p {
+				margin-bottom: 3px;
+			}
+		}
+
+		&__copyright {
+			margin-top: 21px;
+		}
+	}
+
+	&__social-share {
+		padding-top: 4px;
+		text-align: right;
+
+		li {
+			display: inline-block;
+
+			&:last-of-type {
+				.footer-block__social-share__icon {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&__icon {
+			// background: url('../images/social-icons/fb.svg') 50% 50% no-repeat;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			border: 1px solid rgba(255, 255, 255, 1);
+			border-radius: 50%;
+			box-sizing: border-box;
+			display: block;
+			//transition: all .3s ease-in-out;
+			margin-right: 12px;
+			margin-top: 6px;
+			height: 30px;
+			width: 30px;
+
+			&--fb {
+				background-image: url('../images/interview-speakers/Facebook.svg');
+
+				&:hover {
+					background-image: url('../images/interview-speakers/Facebook(hover).svg');
+					border: 1px solid rgba(240, 190, 50, 1);
+				}
+			}
+
+			&--vk {
+				background-image: url('../images/interview-speakers/VK.svg');
+
+				&:hover {
+					background-image: url('../images/interview-speakers/VK(hover).svg');
+					border: 1px solid rgba(240, 190, 50, 1);
+				}
+			}
+
+			&--tw {
+				background-image: url('../images/interview-speakers/Twitter.svg');
+
+				&:hover {
+					background-image: url('../images/interview-speakers/Twitter(hover).svg');
+					border: 1px solid rgba(240, 190, 50, 1);
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 699px) and (min-width: 320px) {
+	.footer-block {
+		&__social-share {
+			&__icon {
+				&--fb {
+					background-image: url('../images/interview-speakers/Facebook.svg');
+
+					&:hover {
+						background-image: initial;
+						border: initial;
+					}
+				}
+
+				&--vk {
+					background-image: url('../images/interview-speakers/VK.svg');
+
+					&:hover {
+						background-image: initial;
+						border: initial;
+					}
+				}
+
+				&--tw {
+					background-image: url('../images/interview-speakers/Twitter.svg');
+
+					&:hover {
+						background-image: initial;
+						border: initial;
+					}
+				}
+			}
+		}
+	}
+}

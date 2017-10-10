@@ -1,0 +1,136 @@
+header {
+	position: relative;
+}
+
+.beeline-wrapper {
+	min-height: 100%;
+	margin-bottom: -127px;
+	
+	&:after {
+		content: '';
+		display: block;
+		height: 127px;
+	}
+}
+
+.header-rbc{
+	width: 100%;
+	height: 48px;
+	background: #ffffff;
+
+	&__logo-rbc{
+		width: 77px;
+		height: 26px;
+		float: left;
+		margin-left: 17px;
+		margin-top: 10px;
+		box-sizing: border-box;
+
+		img{
+			width: 77px;
+			height: 26px;
+		}
+	}
+
+	&__together{
+		margin-right: 26px;
+		float: right;
+
+		span{
+			font-size: 12px;
+			line-height: 48px;
+			font-family: 'GraphikLC-Regular';
+			letter-spacing: -0.2px;
+		}
+	}
+
+	&__logo-beeline{
+		width: 77px;
+		height: 26px;
+		float: right;
+		margin-right: 26px;
+		margin-top: 10px;
+		box-sizing: border-box;
+
+		img{
+			width: 77px;
+			height: 26px;
+		}
+	}
+
+	&__logo-skolkovo{
+		width: 57px;
+		height: 37px;
+		float: right;
+		margin-right: 26px;
+		margin-top: 3px;
+
+		img{
+			width: 52px;
+			height: 37px;
+			margin-left: 5px;
+			margin-top: 2px;
+		}
+	}
+
+}
+
+.header-more{
+	position: relative;
+	width: 100%;
+	height: 64px;
+	background-color: #f0be32;
+	text-align: center;
+	font-family: 'OfficinaSerifMediumC';
+	z-index: 99999999;
+
+	.container {
+		width: auto;
+
+		& > span{
+			font-size: 16px;
+			opacity: 0.9;
+			color: #393939;
+			line-height: 64px;
+			margin-right: 90px;
+			display: inline-block;
+
+			&::before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 40px;
+				height: 40px;
+				margin-right: 20px;
+				background-image: url("../images/main-page/Yellow_banner/Icon_smartphone.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+
+	a{
+		text-decoration: none;
+		font-size: 16px;
+		opacity: 0.9;
+		color: #393939;
+
+
+		&::after{
+			content: '';
+			display: inline-block;
+			width: 21px;
+			height: 21px;
+			margin-top: 5px;
+    		//position: absolute;
+			line-height: 64px;
+			margin-left: 20px;
+			background: url("../images/more.svg") 50% 50% no-repeat;
+			background-size: contain;
+			transform: translateY(5px);
+			//content: url("../images/more.svg");
+		}
+	}
+}
+

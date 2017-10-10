@@ -1,0 +1,70 @@
+extends templates/layout
+block vars
+	- var title = ''
+	- var og_title = ''
+	- var og_description = ''
+	- var og_image = ''
+	- var twitter_description = ''
+
+block content
+	.wrapper
+		#category
+			.header-catigories list of categories
+			.list-catigories
+		#products		
+			.header-products list of products
+			.list-products
+			
+			
+					
+	
+	script#categoryTemplate(type='text/template')
+		a.btn.dropdown-toggle.dropdown-toggle--category(href='#', data-toggle='dropdown') <%- categoryName %>
+			span.category--hidden <%- subcategoriesID %>
+		ul.dropdown-menu(role='menu')
+			li
+				a(href='/product')
+	script#productTemplate(type='text/template')
+		a.btn.dropdown-toggle(href='#', data-toggle='dropdown') <%- productName %>
+			span.category--hidden <%- productID %>
+		ul.dropdown-menu(role='menu')
+			li
+				a(href='/')
+	script#login(type='text/template')
+		.logic-page.authorization-page#login
+			.form
+				form.login-form-authorization(action='/login', method='POST')
+					input(type='text', placeholder='username', id='name')
+					input(type='password', placeholder='password', id='password')
+					input(type='submit', value="sign in", id='button--authorization')
+					p.message
+						| Неверный логин или пароль
+			
+	script#signup(type='text/template')
+		.logic-page.register-page#signup
+			.form
+				form.login-form-register(action='/signup', method='POST')
+					input(type='text', placeholder='username', id='username')
+					input(type='password', placeholder='password', id='password')
+					input(type='submit', value="creat", id='button--login')
+					p.message
+						| Пожалуйста, заполните все поля!
+			
+			
+			
+
+
+			
+	
+		
+	
+
+		
+	
+		
+
+				
+			
+					
+					
+	
